@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>New Restaurant</h2>
+
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category %>
+    <%= f.submit class: "btn btn-primary d-grid gap-2"%>
+  <% end %>
+<br>
+  <%= link_to 'Home', restaurants_path, class: "btn btn-primary"%>
+</div>

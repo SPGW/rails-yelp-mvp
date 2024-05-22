@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  # home page listing all restaurants
+  resources :restaurants do
+    resources :reviews, only: [:new, :create]
+  end
 end
